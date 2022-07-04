@@ -46,15 +46,19 @@
             </Grid.ColumnDefinitions>
             <!--Listbox of results-->
             <StackPanel Grid.Row="0" Grid.Column="0" Background="Azure">
-                <Label Content="{Binding SpinResult, UpdateSourceTrigger=PropertyChanged}" 
+                <Label Content="{Binding ResultInfoString, UpdateSourceTrigger=PropertyChanged}" 
                        HorizontalAlignment="Center"
                        FontSize="24"/>
                 <Label Content="{Binding Result, UpdateSourceTrigger=PropertyChanged}" 
                        HorizontalAlignment="Center"
                        FontSize="24"/>
-                <ListView>
+                
+                <ListBox ItemsSource="{Binding Results}"
+                         ScrollViewer.VerticalScrollBarVisibility="Visible"
+                         ScrollViewer.CanContentScroll="True"
+                         VerticalContentAlignment="Top">
                     
-                </ListView>
+                </ListBox>
             </StackPanel>
             
             <!--Right Side Main Content-->
@@ -83,8 +87,8 @@
                        ContentStringFormat="Bank Balance: £{0}"/>
                 <!--Column 0 Labels-->
                 <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource labelLeft}">Add Funds:</Label>
-                <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource labelLeft}">Set Max Bet:</Label>
-                <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource labelLeft}">Bet Size:</Label>
+                <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource labelLeft}">Set Bet Size:</Label>
+                <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource labelLeft}">Max Bet</Label>
 
                 <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding AddFundAmount}"/>
                 <TextBox Grid.Row="2" Grid.Column="1" Margin="5" Text="{Binding BetSize}"/>
