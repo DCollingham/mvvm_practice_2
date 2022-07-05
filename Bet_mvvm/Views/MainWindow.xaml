@@ -52,7 +52,7 @@
                 <Label Content="{Binding Result, UpdateSourceTrigger=PropertyChanged}" 
                        HorizontalAlignment="Center"
                        FontSize="24"/>
-                
+
                 <ListBox ItemsSource="{Binding Results}"
                          ScrollViewer.VerticalScrollBarVisibility="Visible"
                          ScrollViewer.CanContentScroll="True"

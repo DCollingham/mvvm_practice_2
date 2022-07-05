@@ -12,6 +12,7 @@ namespace Bet_mvvm.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        public ViewModelBase CurrentViewModel { get; }
         private Player player;
         private Table table;
         private int result;
@@ -120,6 +121,7 @@ namespace Bet_mvvm.ViewModels
 
         public MainWindowViewModel()
         {
+            CurrentViewModel = this;
             player = new Player
             {
                 BankBalance = 0
