@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nav"
-        xmlns:viewmodels="clr-namespace:Nav.ViewModels" xmlns:views="clr-namespace:Nav.Views"
+        xmlns:viewmodels="clr-namespace:Nav.ViewModels" xmlns:views="clr-namespace:Nav.Views" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <ContentControl Content="{Binding CurrentViewModel}" >

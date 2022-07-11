@@ -11,11 +11,13 @@ namespace Nav.ViewModels
 {
     public class HomeViewModel : ViewModelBase
     {
-        public ICommand NavigateSettingsCommand { get; }
+
+        public ICommand NavigateCommand { get; }
 
         public HomeViewModel(NavigationStore navigationStore)
         {
-            NavigateSettingsCommand = new NavigateSettingsCommand(navigationStore);
+            NavigateCommand = new NavigateCommand<SettingsViewModel>(navigationStore, () => new SettingsViewModel(navigationStore));
         }
+
     }
 }
